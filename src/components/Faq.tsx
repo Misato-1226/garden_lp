@@ -2,7 +2,7 @@ import React from "react";
 
 export const Faq = () => {
   return (
-    <div>
+    <div className="h-[80vh]">
       <h1>FAQ</h1>
     </div>
   );
