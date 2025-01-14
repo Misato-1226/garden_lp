@@ -4,15 +4,15 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface PropsType {
   handleEvent: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  selectedOption: string;
+  event: string;
 }
 
-export const SelectEvent = ({ handleEvent, selectedOption }: PropsType) => {
+export const SelectEvent = ({ handleEvent, event }: PropsType) => {
   return (
     <div className="">
       <h2 className="text-3xl font-semibold">Choose Ticket</h2>
       <div className="py-5">
-        <RadioGroup defaultValue={selectedOption}>
+        <RadioGroup defaultValue={event}>
           <div className="flex items-center space-x-2">
             <RadioGroupItem
               value="festivalOfLights"
