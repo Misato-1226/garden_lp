@@ -49,13 +49,13 @@ export const Hero_section = () => {
         </h1>
       </div>
       <div className="absolute top-64 left-1/2 transform -translate-x-1/2 z-10">
-        <h2 className="text-white text-9xl font-monteCarlo">
+        <h2 className="text-white text-7xl font-monteCarlo">
           Festival of Lights
         </h2>
       </div>
       <div className="absolute bottom-48 left-1/2 transform -translate-x-1/2 z-10 flex justify-center">
         <Link href="/payment">
-          <button className="text-white text-2xl font-bold bg-red-600 border-4 border-white px-8 py-4 rounded-2xl ">
+          <button className="text-white text-xl font-bold bg-red-600 border-4 border-white px-8 py-4 rounded-2xl ">
             Get Tickets Now
           </button>
         </Link>

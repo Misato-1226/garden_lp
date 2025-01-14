@@ -18,13 +18,13 @@ export const Upcoming_events = () => {
   };
   return (
     <div className="h-[80vh] bg-green-800">
-      <h1 className="text-center text-white font-semibold text-5xl p-14">
+      <h1 className="text-center text-white font-semibold text-3xl p-14">
         Upcoming Events
       </h1>
       <div className="flex justify-center items-center p-10 gap-x-10">
         <Card className="rounded-3xl">
           <CardHeader>
-            <CardTitle className="text-center text-4xl">
+            <CardTitle className="text-center text-2xl">
               Festival of Lights
             </CardTitle>
             <CardDescription className="text-xl mx-10 pt-10 text-black">
@@ -33,7 +33,7 @@ export const Upcoming_events = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-5xl text-center font-bold mb-3">$ 29.90</p>
+            <p className="text-3xl text-center font-bold mb-3">$ 29.90</p>
           </CardContent>
           <CardFooter className="flex justify-center">
             <button
@@ -46,7 +46,7 @@ export const Upcoming_events = () => {
         </Card>
         <Card className="rounded-3xl">
           <CardHeader>
-            <CardTitle className="text-center text-4xl">
+            <CardTitle className="text-center text-2xl">
               Garden Gift Shop
             </CardTitle>
             <CardDescription className="text-xl mx-10 pt-10 text-black">
@@ -55,7 +55,7 @@ export const Upcoming_events = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-5xl text-center font-bold mb-3">$ 19.90</p>
+            <p className="text-3xl text-center font-bold mb-3">$ 19.90</p>
           </CardContent>
           <CardFooter className="flex justify-center">
             <button
@@ -68,7 +68,7 @@ export const Upcoming_events = () => {
         </Card>
         <Card className="rounded-3xl">
           <CardHeader>
-            <CardTitle className="text-center text-4xl">
+            <CardTitle className="text-center text-2xl">
               Medicine Event
             </CardTitle>
             <CardDescription className="text-xl mx-10 pt-10 text-black">
@@ -77,7 +77,7 @@ export const Upcoming_events = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-5xl text-center font-bold mb-3">$ 18.90</p>
+            <p className="text-3xl text-center font-bold mb-3">$ 18.90</p>
           </CardContent>
           <CardFooter className="flex justify-center">
             <button
