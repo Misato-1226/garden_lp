@@ -105,13 +105,13 @@ export function PaymentForm({ event }: PropsType) {
             <div>
               <h2 className="text-xl">
                 Amount:
-                <span className="text-2xl font-semibold ml-5">
+                <span className="text-xl font-semibold ml-5">
                   ${totalPrice}
                 </span>{" "}
               </h2>
               <h3 className="text-xl">
                 Selected ticket:{" "}
-                <span className="text-2xl font-semibold ml-5">{event}</span>
+                <span className="text-xl font-semibold ml-5">{event}</span>
               </h3>
             </div>
             <div>
