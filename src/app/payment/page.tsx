@@ -5,7 +5,7 @@ import { SelectEvent } from "@/components/SelectEvent";
 import { useState } from "react";
 
 interface Props {
-  searchParams: { [key: string]: string | undefined };
+  searchParams: Record<string, string | undefined>;
 }
 
 const Payment = ({ searchParams }: Props) => {
