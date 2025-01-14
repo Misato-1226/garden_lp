@@ -3,7 +3,7 @@
 import { PaymentForm } from "@/components/PaymentForm";
 import { SelectEvent } from "@/components/SelectEvent";
 import { useSearchParams } from "next/navigation";
-import { useState, Suspense } from "react";
+import { useState } from "react";
 
 const Payment = () => {
   const searchParams = useSearchParams();
@@ -15,16 +15,11 @@ const Payment = () => {
     setEvent(eventValue);
   };
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
-        <SelectEvent
-          handleEvent={handleEvent}
-          selectedOption={selectedOption}
-        />
+    <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
+      <SelectEvent handleEvent={handleEvent} selectedOption={selectedOption} />
 
-        <PaymentForm event={event} />
-      </div>
-    </Suspense>
+      <PaymentForm event={event} />
+    </div>
   );
 };
 
