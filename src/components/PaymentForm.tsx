@@ -50,7 +50,7 @@ export function PaymentForm({ event }: PropsType) {
     <div>
       <Card className="w-[50vh]">
         <CardHeader>
-          <CardTitle className="text-3xl font-semibold">
+          <CardTitle className="text-2xl font-semibold">
             Ticket Payment
           </CardTitle>
           <CardDescription>
@@ -115,7 +115,7 @@ export function PaymentForm({ event }: PropsType) {
               </h3>
             </div>
             <div>
-              <Button variant="outline" className="text-xl py-8 w-full mt-10">
+              <Button variant="outline" className="text-xl py-8 w-full mt-5">
                 Make a Payment
               </Button>
             </div>

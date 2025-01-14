@@ -49,7 +49,7 @@ export const Hero_section = () => {
         </h1>
       </div>
       <div className="absolute top-64 left-1/2 transform -translate-x-1/2 z-10">
-        <h2 className="text-white text-7xl font-monteCarlo">
+        <h2 className="text-white text-8xl font-monteCarlo">
           Festival of Lights
         </h2>
       </div>

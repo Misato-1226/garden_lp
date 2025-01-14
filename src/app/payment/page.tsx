@@ -17,7 +17,7 @@ const Payment = () => {
   };
 
   return (
-    <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
+    <div className="h-[140vh] flex flex-col justify-center items-center gap-y-10 p-20">
       <SelectEvent handleEvent={handleEvent} selectedOption={event} />
 
       <PaymentForm event={event} />

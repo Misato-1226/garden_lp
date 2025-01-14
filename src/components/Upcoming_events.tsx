@@ -18,7 +18,7 @@ export const Upcoming_events = () => {
   };
   return (
     <div className="h-[80vh] bg-green-800">
-      <h1 className="text-center text-white font-semibold text-3xl p-14">
+      <h1 className="text-center text-white font-semibold text-4xl p-14">
         Upcoming Events
       </h1>
       <div className="flex justify-center items-center p-10 gap-x-10">
