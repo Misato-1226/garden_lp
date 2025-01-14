@@ -7,11 +7,11 @@ import { useState } from "react";
 
 const Payment = () => {
   const searchParams = useSearchParams();
-  const selectedOption = searchParams.get("selectedOption");
-  const [event, setEvent] = useState(selectedOption);
+  const selectedOption = searchParams.get("selectedOption") || "";
+  const [event, setEvent] = useState<string>(selectedOption);
 
-  const handleEvent = (event) => {
-    const eventValue = event.target.value;
+  const handleEvent = (event: React.MouseEvent<HTMLElement>) => {
+    const eventValue = (event.currentTarget as HTMLButtonElement).value;
     setEvent(eventValue);
   };
   return (

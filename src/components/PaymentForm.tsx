@@ -18,7 +18,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
-export function PaymentForm({ event }) {
+interface PropsType {
+  event: string;
+}
+
+export function PaymentForm({ event }: PropsType) {
   const [price, setPrice] = useState(0);
   const [ticketCount, setTicketCount] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -39,7 +43,7 @@ export function PaymentForm({ event }) {
     setTotalPrice(Number(total.toFixed(1)));
   }, [price, ticketCount]);
 
-  const handleTicketPrice = (value) => {
+  const handleTicketPrice = (value: string) => {
     setTicketCount(Number(value));
   };
   return (

@@ -4,7 +4,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 import { useSearchParams } from "next/navigation";
 
-export const SelectEvent = ({ handleEvent }) => {
+export const SelectEvent = ({
+  handleEvent,
+}: {
+  handleEvent: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}) => {
   const searchParams = useSearchParams();
   const selectedOption = searchParams.get("selectedOption") || "";
 
