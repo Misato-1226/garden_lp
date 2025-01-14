@@ -15,14 +15,13 @@ const Payment = () => {
     setEvent(eventValue);
   };
   return (
-    <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
-      <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
         <SelectEvent handleEvent={handleEvent} />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+
         <PaymentForm event={event} />
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 };
 
