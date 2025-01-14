@@ -2,14 +2,13 @@
 
 import { PaymentForm } from "@/components/PaymentForm";
 import { SelectEvent } from "@/components/SelectEvent";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useState, Suspense } from "react";
 
-interface Props {
-  searchParams: Record<string, string | undefined>;
-}
+const Payment = () => {
+  const searchParams = useSearchParams();
+  const selectedOption = searchParams?.get("selectedOption") || "";
 
-const Payment = ({ searchParams }: Props) => {
-  const selectedOption = searchParams.selectedOption || ""; // クエリパラメータから取得
   const [event, setEvent] = useState<string>(selectedOption);
 
   const handleEvent = (event: React.MouseEvent<HTMLElement>) => {
@@ -19,7 +18,9 @@ const Payment = ({ searchParams }: Props) => {
 
   return (
     <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
-      <SelectEvent handleEvent={handleEvent} selectedOption={event} />
+      <Suspense fallback={<div>Loading Select Event...</div>}>
+        <SelectEvent handleEvent={handleEvent} selectedOption={event} />
+      </Suspense>
       <PaymentForm event={event} />
     </div>
   );
