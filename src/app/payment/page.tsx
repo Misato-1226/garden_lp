@@ -1,3 +1,5 @@
+"use client";
+
 import { PaymentForm } from "@/components/PaymentForm";
 import { SelectEvent } from "@/components/SelectEvent";
 import { useState } from "react";
