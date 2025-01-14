@@ -3,8 +3,10 @@ import Image from "next/image";
 
 export const Map = () => {
   return (
-    <div className="h-[100vh]">
-      <h1 className="text-center font-semibold text-5xl p-14">Garden Map</h1>
+    <div className="h-[100vh] bg-emerald-700">
+      <h1 className="text-center text-white font-semibold text-5xl p-14">
+        Garden Map
+      </h1>
       <div className="flex items-center justify-center">
         <Image
           height={900}

@@ -2,10 +2,14 @@
 
 import { PaymentForm } from "@/components/PaymentForm";
 import { SelectEvent } from "@/components/SelectEvent";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 const Payment = () => {
-  const [event, setEvent] = useState("");
+  const searchParams = useSearchParams();
+  const selectedOption = searchParams.get("selectedOption");
+  const [event, setEvent] = useState(selectedOption);
+
   const handleEvent = (event) => {
     const eventValue = event.target.value;
     setEvent(eventValue);

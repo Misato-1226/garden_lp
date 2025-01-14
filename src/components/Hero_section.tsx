@@ -2,9 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react"; // Swiper コンポーネントをインポート
-import { Autoplay } from "swiper/modules"; // Autoplay モジュールをインポート
+import { Autoplay, EffectFade } from "swiper/modules"; // Autoplay モジュールをインポート
 import "swiper/css"; // Swiper のスタイル
 import "swiper/css/autoplay"; // 自動再生用のスタイル
+import "swiper/css/effect-fade";
+import Link from "next/link";
 
 export const Hero_section = () => {
   const slides = [
@@ -19,9 +21,11 @@ export const Hero_section = () => {
   return (
     <div className="h-screen relative">
       <Swiper
-        modules={[Autoplay]} // 自動再生モジュールを使用
-        autoplay={{ delay: 5000, disableOnInteraction: false }} // 自動再生設定
+        modules={[Autoplay, EffectFade]} // 自動再生モジュールを使用
+        autoplay={{ delay: 5000 }} // 自動再生設定
         loop={true} // 無限ループ
+        effect={"fade"}
+        speed={5000}
         className="h-full"
       >
         {slides.map((slide) => (
@@ -50,9 +54,11 @@ export const Hero_section = () => {
         </h2>
       </div>
       <div className="absolute bottom-48 left-1/2 transform -translate-x-1/2 z-10 flex justify-center">
-        <button className="text-white text-2xl font-bold bg-green-800 border-2 border-white px-8 py-4 rounded-2xl ">
-          Get Tickets Now
-        </button>
+        <Link href="/payment">
+          <button className="text-white text-2xl font-bold bg-red-600 border-4 border-white px-8 py-4 rounded-2xl ">
+            Get Tickets Now
+          </button>
+        </Link>
       </div>
     </div>
   );

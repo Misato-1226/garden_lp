@@ -8,8 +8,10 @@ import {
 
 export const Faq = () => {
   return (
-    <div className="h-[80vh] bg-green-200">
-      <h1 className="text-center font-semibold text-5xl p-14">FAQ</h1>
+    <div className="h-[80vh] bg-rose-800">
+      <h1 className="text-center text-white font-semibold text-5xl p-14">
+        FAQ
+      </h1>
       <div className="p-40">
         <Accordion type="single" collapsible className="bg-white">
           <AccordionItem value="item-1" className="px-5 py-2">

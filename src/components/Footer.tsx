@@ -16,13 +16,22 @@ export const Footer = () => {
         </div>
         <div className="flex gap-x-3">
           <div>
-            <Image height={40} width={40} src="instagram.svg" alt="" />
+            <a href="https://www.instagram.com/vandusengarden/" target="_blank">
+              <Image height={40} width={40} src="instagram.svg" alt="" />
+            </a>
           </div>
           <div>
-            <Image height={40} width={40} src="facebook.svg" alt="" />
+            <a
+              href="https://www.facebook.com/vandusenbotanicalgarden/"
+              target="_blank"
+            >
+              <Image height={40} width={40} src="facebook.svg" alt="" />
+            </a>
           </div>
           <div>
-            <Image height={40} width={40} src="twitter.svg" alt="" />
+            <a href="https://twitter.com/VanDusenGdn" target="_blank">
+              <Image height={40} width={40} src="twitter.svg" alt="" />
+            </a>
           </div>
         </div>
       </footer>

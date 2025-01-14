@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import {
   Card,
   CardContent,
@@ -7,10 +8,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
 export const Upcoming_events = () => {
+  const router = useRouter();
+
+  const goToPayment = (option: string) => {
+    router.push(`/payment?selectedOption=${option}`);
+  };
   return (
-    <div className="h-[80vh] bg-green-700">
+    <div className="h-[80vh] bg-green-800">
       <h1 className="text-center text-white font-semibold text-5xl p-14">
         Upcoming Events
       </h1>
@@ -29,7 +36,10 @@ export const Upcoming_events = () => {
             <p className="text-5xl text-center font-bold mb-3">$ 29.90</p>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <button className="text-white text-xl rounded-2xl bg-red-500 py-4 px-8">
+            <button
+              onClick={() => goToPayment("festivalOfLights")}
+              className="text-white text-xl rounded-2xl bg-red-500 py-4 px-8"
+            >
               Buy Tickets
             </button>
           </CardFooter>
@@ -48,7 +58,10 @@ export const Upcoming_events = () => {
             <p className="text-5xl text-center font-bold mb-3">$ 19.90</p>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <button className="text-white text-xl rounded-2xl bg-red-500 py-4 px-8">
+            <button
+              onClick={() => goToPayment("GardenGiftShop")}
+              className="text-white text-xl rounded-2xl bg-red-500 py-4 px-8"
+            >
               Buy Tickets
             </button>
           </CardFooter>
@@ -67,7 +80,10 @@ export const Upcoming_events = () => {
             <p className="text-5xl text-center font-bold mb-3">$ 18.90</p>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <button className="text-white text-xl rounded-2xl bg-red-500 py-4 px-8">
+            <button
+              onClick={() => goToPayment("MedicineEvent")}
+              className="text-white text-xl rounded-2xl bg-red-500 py-4 px-8"
+            >
               Buy Tickets
             </button>
           </CardFooter>

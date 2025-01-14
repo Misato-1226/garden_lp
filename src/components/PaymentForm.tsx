@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -34,7 +35,8 @@ export function PaymentForm({ event }) {
   }, [event]);
 
   useEffect(() => {
-    setTotalPrice(price * ticketCount);
+    const total = price * ticketCount;
+    setTotalPrice(Number(total.toFixed(1)));
   }, [price, ticketCount]);
 
   const handleTicketPrice = (value) => {
@@ -47,7 +49,11 @@ export function PaymentForm({ event }) {
           <CardTitle className="text-3xl font-semibold">
             Ticket Payment
           </CardTitle>
-          <CardDescription>Card Description</CardDescription>
+          <CardDescription>
+            <div className="p-2">
+              <Image height={300} width={300} alt="" src="/card_5brand.png" />
+            </div>
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
@@ -93,14 +99,15 @@ export function PaymentForm({ event }) {
               <Input placeholder="John Doe" />
             </div>
             <div>
-              <h2>
+              <h2 className="text-xl">
                 Amount:
-                <span className="text-xl font-semibold">
+                <span className="text-2xl font-semibold ml-5">
                   ${totalPrice}
                 </span>{" "}
               </h2>
-              <h3>
-                Selected ticket: <span>{event}</span>
+              <h3 className="text-xl">
+                Selected ticket:{" "}
+                <span className="text-2xl font-semibold ml-5">{event}</span>
               </h3>
             </div>
             <div>

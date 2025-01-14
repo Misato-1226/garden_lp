@@ -1,14 +1,18 @@
-import React from "react";
 import { Label } from "@/components/ui/label";
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
+import { useSearchParams } from "next/navigation";
+
 export const SelectEvent = ({ handleEvent }) => {
+  const searchParams = useSearchParams();
+  const selectedOption = searchParams.get("selectedOption") || "";
+
   return (
     <div className="">
       <h2 className="text-3xl font-semibold">Choose Ticket</h2>
       <div className="py-5">
-        <RadioGroup defaultValue="option-one">
+        <RadioGroup defaultValue={selectedOption}>
           <div className="flex items-center space-x-2">
             <RadioGroupItem
               value="festivalOfLights"
