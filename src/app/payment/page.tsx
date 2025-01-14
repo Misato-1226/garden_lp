@@ -17,7 +17,10 @@ const Payment = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="h-[120vh] flex flex-col justify-center items-center gap-y-24 p-10">
-        <SelectEvent handleEvent={handleEvent} />
+        <SelectEvent
+          handleEvent={handleEvent}
+          selectedOption={selectedOption}
+        />
 
         <PaymentForm event={event} />
       </div>

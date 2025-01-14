@@ -1,19 +1,13 @@
-"use client";
-
 import { Label } from "@/components/ui/label";
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
-import { useSearchParams } from "next/navigation";
-
-export const SelectEvent = ({
-  handleEvent,
-}: {
+interface PropsType {
   handleEvent: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}) => {
-  const searchParams = useSearchParams();
-  const selectedOption = searchParams.get("selectedOption") || "";
+  selectedOption: string;
+}
 
+export const SelectEvent = ({ handleEvent, selectedOption }: PropsType) => {
   return (
     <div className="">
       <h2 className="text-3xl font-semibold">Choose Ticket</h2>
