@@ -17,17 +17,17 @@ export const Upcoming_events = () => {
     router.push(`/payment?selectedOption=${option}`);
   };
   return (
-    <div className="h-[80vh] bg-green-800">
-      <h1 className="text-center text-white font-semibold text-4xl p-14">
+    <div className="xl:h-[80vh] bg-green-800">
+      <h1 className="text-center text-white font-semibold text-2xl md:text-4xl md:p-14 p-10">
         Upcoming Events
       </h1>
-      <div className="flex justify-center items-center p-10 gap-x-10">
-        <Card className="rounded-3xl">
+      <div className="md:flex justify-center items-center p-10 gap-x-10">
+        <Card className="md:mb-0 mb-5 rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center text-2xl">
               Festival of Lights
             </CardTitle>
-            <CardDescription className="text-xl mx-10 pt-10 text-black">
+            <CardDescription className="text-lg md:text-xl md:mx-10 pt-10 text-black">
               A unique opportunity to explore themed light areas, and savour
               tasty treats from a variety of food vendors.
             </CardDescription>
@@ -44,12 +44,12 @@ export const Upcoming_events = () => {
             </button>
           </CardFooter>
         </Card>
-        <Card className="rounded-3xl">
+        <Card className="md:mb-0 mb-5 rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center text-2xl">
               Garden Gift Shop
             </CardTitle>
-            <CardDescription className="text-xl mx-10 pt-10 text-black">
+            <CardDescription className="text-lg md:text-xl mx-10 md:pt-10 text-black">
               Save big on holiday decor and garden-inspired gift. Plus enjoy
               complimentary coffee, tea, and treats.
             </CardDescription>
@@ -66,12 +66,12 @@ export const Upcoming_events = () => {
             </button>
           </CardFooter>
         </Card>
-        <Card className="rounded-3xl">
+        <Card className="rounded-3xl md:mb-0 mb-5">
           <CardHeader>
             <CardTitle className="text-center text-2xl">
               Medicine Event
             </CardTitle>
-            <CardDescription className="text-xl mx-10 pt-10 text-black">
+            <CardDescription className="text-lg md:text-xl mx-10 md:pt-10 text-black">
               Drumming and prayers are shared. People from varying backgrounds
               and spiritual traditions are all invited.
             </CardDescription>

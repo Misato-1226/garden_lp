@@ -10,7 +10,7 @@ interface PropsType {
 export const SelectEvent = ({ handleEvent, selectedOption }: PropsType) => {
   return (
     <div className="">
-      <h2 className="text-3xl font-semibold">Choose Ticket</h2>
+      <h2 className="text-2xl lg:text-3xl font-semibold">Choose Ticket</h2>
       <div className="py-5">
         <RadioGroup defaultValue={selectedOption}>
           <div className="flex items-center space-x-2">
@@ -19,7 +19,7 @@ export const SelectEvent = ({ handleEvent, selectedOption }: PropsType) => {
               id="option-one"
               onClick={handleEvent}
             />
-            <Label htmlFor="option-one" className="text-2xl">
+            <Label htmlFor="option-one" className="text-lg lg:text-2xl">
               Festival of Lights
               <span className="ml-10">-$29.90</span>
             </Label>
@@ -30,7 +30,7 @@ export const SelectEvent = ({ handleEvent, selectedOption }: PropsType) => {
               id="option-two"
               onClick={handleEvent}
             />
-            <Label htmlFor="option-two" className="text-2xl">
+            <Label htmlFor="option-two" className="text-lg lg:text-2xl">
               Garden Gift Shop
               <span className="ml-10">-$19.90</span>
             </Label>
@@ -41,7 +41,7 @@ export const SelectEvent = ({ handleEvent, selectedOption }: PropsType) => {
               id="option-three"
               onClick={handleEvent}
             />
-            <Label htmlFor="option-three" className="text-2xl">
+            <Label htmlFor="option-three" className="text-lg lg:text-2xl">
               Medicine Event
               <span className="ml-10">-$18.90</span>
             </Label>

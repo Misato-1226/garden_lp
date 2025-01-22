@@ -47,8 +47,8 @@ export function PaymentForm({ event }: PropsType) {
     setTicketCount(Number(value));
   };
   return (
-    <div>
-      <Card className="w-[50vh]">
+    <div className="">
+      <Card className="md:w-[50vh]">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">
             Ticket Payment
@@ -62,7 +62,9 @@ export function PaymentForm({ event }: PropsType) {
         <CardContent>
           <div className="space-y-6">
             <div>
-              <Label className="text-xl font-semibold">Number of Ticket</Label>
+              <Label className="text-lg md:text-xl font-semibold">
+                Number of Ticket
+              </Label>
               <Select onValueChange={handleTicketPrice}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="1" />
@@ -77,45 +79,60 @@ export function PaymentForm({ event }: PropsType) {
               </Select>
             </div>
             <div>
-              <Label htmlFor="cardNumber" className="text-xl font-semibold">
+              <Label
+                htmlFor="cardNumber"
+                className="text-lg md:text-xl font-semibold"
+              >
                 Card Number
               </Label>
               <Input placeholder="1234 5678 9012 3456" />
             </div>
-            <div className="flex justify-between items-center">
+            <div className="md:flex justify-between items-center">
               <div>
-                <Label htmlFor="expiryDate" className="text-xl font-semibold">
+                <Label
+                  htmlFor="expiryDate"
+                  className="text-lg md:text-xl font-semibold"
+                >
                   Expiry Date
                 </Label>
                 <Input id="expiryDate" placeholder="MM/YY" />
               </div>
               <div>
-                <Label htmlFor="cvv" className="text-xl font-semibold">
+                <Label
+                  htmlFor="cvv"
+                  className="text-lg md:text-xl font-semibold"
+                >
                   CVV
                 </Label>
                 <Input placeholder="" />
               </div>
             </div>
             <div>
-              <Label htmlFor="cardName" className="text-xl font-semibold">
+              <Label
+                htmlFor="cardName"
+                className="text-lg md:text-xl font-semibold"
+              >
                 Name on Card
               </Label>
               <Input placeholder="John Doe" />
             </div>
             <div>
-              <h2 className="text-xl">
+              <h2 className="text-lg md:text-xl">
                 Amount:
                 <span className="text-xl font-semibold ml-5">
                   ${totalPrice}
                 </span>{" "}
               </h2>
-              <h3 className="text-xl">
+              <h3 className="text-lg md:text-xl">
                 Selected ticket:{" "}
                 <span className="text-xl font-semibold ml-5">{event}</span>
               </h3>
             </div>
             <div>
-              <Button variant="outline" className="text-xl py-8 w-full mt-5">
+              <Button
+                variant="outline"
+                className="text-lg md:text-xl py-5 md:py-8 w-full mt-5"
+              >
                 Make a Payment
               </Button>
             </div>

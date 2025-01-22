@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export const Map = () => {
   return (
-    <div className="h-[100vh] bg-emerald-700">
-      <h1 className="text-center text-white font-semibold text-4xl p-14">
+    <div className="xl:h-[100vh] bg-emerald-700">
+      <h1 className="text-center text-white font-semibold text-2xl md:text-4xl p-14">
         Garden Map
       </h1>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center xl:p-0 p-5">
         <Image
           height={700}
           width={700}

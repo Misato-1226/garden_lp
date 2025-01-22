@@ -19,7 +19,7 @@ export const Hero_section = () => {
   ];
 
   return (
-    <div className="h-screen relative">
+    <div className="md:h-screen h-[80vh] relative">
       <Swiper
         modules={[Autoplay, EffectFade]} // 自動再生モジュールを使用
         autoplay={{ delay: 5000 }} // 自動再生設定
@@ -44,18 +44,18 @@ export const Hero_section = () => {
       </Swiper>
       {/* swiper.jsの仕様上、z-indexは10以上に設定しないと上に表示されない。 */}
       <div className="absolute bottom-3/4 left-1/2 transform -translate-x-1/2 z-10">
-        <h1 className="text-white text-4xl font-bold shadow-md font-roboto">
+        <h1 className="text-white text-xl md:text-2xl lg:text-4xl font-bold shadow-md font-roboto">
           VanDusen Botanical Garden
         </h1>
       </div>
       <div className="absolute top-64 left-1/2 transform -translate-x-1/2 z-10">
-        <h2 className="text-white text-8xl font-monteCarlo">
+        <h2 className="text-white text-5xl md:text-7xl lg:text-8xl font-monteCarlo">
           Festival of Lights
         </h2>
       </div>
       <div className="absolute bottom-48 left-1/2 transform -translate-x-1/2 z-10 flex justify-center">
         <Link href="/payment">
-          <button className="text-white text-xl font-bold bg-red-600 border-4 border-white px-8 py-4 rounded-2xl ">
+          <button className="text-white text-md lg:text-xl font-bold bg-red-600 border-4 border-white px-4 lg:px-8 py-2 lg:py-4 rounded-2xl ">
             Get Tickets Now
           </button>
         </Link>
